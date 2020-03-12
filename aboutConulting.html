@@ -1,0 +1,126 @@
+<html>
+<head>
+ <title>Peter's website</title>
+	   <link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+</head>
+<body>
+ <div class="header">
+	    <h1>Peter Kingston:Consultant at work</h1>
+		<p>welcome to my website</p>
+    </div>
+	
+		<div class="topnav">
+	  <a href="index.html">Home</a>
+	  <a href="cv.html">CV</a>
+	  <a href="MyInterestss.html">My Interests</a>
+	  <a href="aboutConulting.html">About Consulting</a>
+	  <a href="/Ebus1.html">Consulting services</a>
+	</div>
+
+<h3>Fade in Tabs</h3>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Hyperautomation</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Multiexperience</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Distributed-cloud</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>Hyperautomation</h3>
+  <p style="font-size:20px">Hyperautomation brings together several components of process automation, integrating tools and technologies that amplify the ability to automate work.
+  It starts with robotic process automation (RPA) at its core, and expands automation capability with artificial intelligence (AI), process mining, analytics, and other advanced tools.
+The idea is to automate more and more knowledge work, and engage everyone in an organization to be part of the transformation. </p>
+<img src="hyper.jpg" alt="" width="500" height="333">
+ <p><a href=" https://www.uipath.com/rpa/hyperautomation">where you can learn more about Hyperautomation</a></p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Multiexpereince</h3>
+  <p style="font-size:20px">Multiexperience refers to the various permutations of modalities (e.g., touch, voice and gesture), devices and apps that users interact with on their digital
+  journey across the various touchpoints. Multiexperience development involves creating fit-for-purpose apps based on touchpoint-specific modalities, while at the same time ensuring
+  a consistent user experience across web, mobile, wearable, conversational and immersive touchpoints.</p>
+  <img src="Multi.jpg" alt="" width="500" height="333">
+  <p><a href="https://www.gartner.com/en/information-technology/glossary/multiexperience-development-platforms-mxdp">where you can learn more about multi-Experience</a></p>
+  
+</div>
+
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Distributed-cloud</h3>
+  <p style="font-size:20px">A distributed cloud means that the computation, storage, and networking are in a micro-cloud located
+  outside the centralized cloud. The distributed cloud is closer to the end-user as a decentralized cloud system.The cloud expands its territory and becomes a distributed cloud.This is the distribution of public cloud services to different
+  locations while the originating public cloud provider assumes responsibility for the operation, governance, updates to and evolution of the services. According to industry analyst Gartner's report, this represents a significant shift from
+  the centralized model of most public cloud services and will lead to a new era in cloud computing. </p>
+  <img src="cloud.jpg" alt="" width="500" height="333">
+  <p><a href="https://interestingengineering.com/next-generation-of-cloud-computing-distributed-cloud">where you can learn more about cloud-distribution</a></p>
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
