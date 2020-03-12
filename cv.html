@@ -1,0 +1,126 @@
+<html<DOCTYPE html>
+<html lang="en">
+   <head> 
+       <title>Peter's website</title>
+	   <link rel="stylesheet" type="text/css" href="style.css">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+</style>
+	</head>
+	
+<body>
+    <div class="header">
+	    <h1>Peter Kingston: Consultant at work</h1>
+		<p>welcome to my website</p>
+    </div>
+	
+		<div class="topnav">
+	  <a href="file:///C:/Users/peter/Documents/College/HTML/Home.html">Home</a>
+	  <a href="file:///C:/Users/peter/Documents/College/HTML/cv.html">CV</a>
+	  <a href="file:///C:/Users/peter/Documents/College/HTML/MyInterestss.html">My Interests</a>
+	  <a href="file:///C:/Users/peter/Documents/College/HTML/aboutConulting.html">About Consulting</a>
+	  <a href="file:///C:/Users/peter/Documents/College/HTML/Ebus1.html">Consulting services</a>
+	</div>
+	
+	<h2>my Curriculum Vitae</h2>
+
+
+<div class="tab">
+  <button class="tablinks" onclick="MYcv(event, 'Personal Details')" id="defaultOpen">Personal Details</button>
+  <button class="tablinks" onclick="MYcv(event, 'Educational Details')">Educational Details</button>
+  <button class="tablinks" onclick="MYcv(event, 'Part-time Work Experiences')">Part-time Work Experiences</button>
+</div>
+
+<div id="Personal Details" class="tabcontent">
+  <h3>Personal Details</h3>
+  <p>I am From Cork City</p>
+   <p>I am currently Studying Business informaton systems in UCC</p>
+    <p>I am 19 years old</p>
+	 <p>I am a flexible, hard - working person who is determined to finish tasks</p>
+	  <p>I can fix any problem</p>
+</div>
+
+<div id="Educational Details" class="tabcontent">
+  <h3>Educational Details</h3>
+  <p>-St Anthony's Primary School, BallinLough</p> 
+  <p>-Christians Brothers College Secondary School</p>
+  <p>-University College Cork, Studying Business Information Systems</p>
+</div>
+
+<div id="Part-time Work Experiences" class="tabcontent">
+  <h3>Part-Time Work Experience</h3>
+  <p>-Worked Two weeks in TechSmart, kinsale road as an analyst</p>
+   <p>-Work Part-Time in Ballintemple Food Store as a Cashier and Floor Worker</p>
+    <p>-In summer time, I work in The Blind Piper Pub as a Barman and Waiter<p>
+	 <p>-I have worked in the Temple inn Pub as a Barman</p>
+	  <p>-I have also worked in Pairc ui Chaoimh</p>
+</div>
+
+<script>
+function MYcv(evt, MYcv) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(MYcv).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+document.getElementById("defaultOpen").click();
+</script>
+   
+	 
+</body>
+</html>

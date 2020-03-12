@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interests</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#container {
+  overflow: hidden;
+  width: 800px;
+  height: 230px;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top:150px;
+}
+
+#imgs {
+  display: block;
+  padding: 0;
+  width: 200%;
+}
+
+#imgs li {
+  padding-right: 10px;
+  display: inline-block;
+ *display:inline;
+}
+
+#imgs img {
+  width: 160px;
+  height: 120px;
+}
+
+.title {
+  display: block;
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: #ddd;
+}
+</style>
+
+
+</head>
+<body>
+
+<div class="header">
+	    <h1>Peter Kingston:Consultant at work</h1>
+		<p>welcome to my website</p>
+    </div>
+	
+		<div class="topnav">
+	  <a href="file:///C:/Users/peter/Documents/College/HTML/Home.html">Home</a>
+	  <a href="file:///C:/Users/peter/Documents/College/HTML/cv.html">CV</a>
+	  <a href="file:///C:/Users/peter/Documents/College/HTML/MyInterestss.html">My Interests</a>
+	  <a href="file:///C:/Users/peter/Documents/College/HTML/aboutConulting.html">About Consulting</a>
+	  <a href="file:///C:/Users/peter/Documents/College/HTML/Ebus1.html">Consulting services</a>
+	</div>
+
+
+
+
+<div class="container">
+ <span class="title"></span>
+  <ul id="imgs">
+    <li><img src="1.jpg" alt="" /></li>
+    <li><img src="2.jpg" alt="" /></li>
+    <li><img src="3.jpg" alt="" /></li>
+    <li><img src="4.jpg" alt="" /></li>
+    <li><img src="5.jpg" alt="" /></li>
+    <li><img src="6.jpg" alt="" /></li>
+	<li><img src="7.jpg" alt="" /></li>
+	<li><img src="8.jpg" alt="" /></li>
+
+  </ul>
+  
+  <span class="title"></span> </div>
+<div id="controler"> </div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="lib/ImageScroll.js"></script>
+<script type="text/javascript">
+
+
+
+  $('#imgs').imageScroll({
+    orientation:"left",
+    speed:600,
+    interval:1000,
+    hoverPause:true,
+    callback:function(){
+      var ordinal = $(this).find("img").first().attr("src");
+      <!-- console.log(ordinal); -->
+      $(this).next("span").text("CallbackDisplay: hidden "+ordinal+"!");
+    }
+  });
+
+  </script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</div>
+
+<h2> Sports </h2>
+<p>-I am an avid Sports fan, especially of sports like soccer and Rugby.</p>
+<p>-I play for Avondale united Football club as a stricker, where we have found success in the priemership,
+even going as far as to represent Avondale in Barcelona.</p>
+<p>-I also support Manchester United Football Club and the Republic of Ireland Football team, where i go to at least one game 
+every year respectively.</p>
+<p>-I Also support the Irish men's Rugby team, as my father played for the international team, representing Ireland in the First three world cups as a Hooker.</p>
+<p>-I also play for Cork Constitution Rugby Club as a Hooker</p>
+
+<h2> Travel </h2>
+<p> -My other avid interest would be would be travel. I think it is important to open yourself up to other experiences and cultures.</p>
+<p> -One of my favourite activities to do on holidays is skiing. i've been to Austria to go skiing in 2016 which was absolutely amazing</p>
+<p> -I have been to amsterdam, a city which is filled with culture, such as the anne frank house, a plethrea of musueums and one of the greatest football arenas in the world</p>
+<p> -This summer i will be interrailing around europe and will be traveling to Prague,Vienna,Budapest,bled,Amsterdam one again and Berlin. i'm very excited to see lake bled in Slovenia</p>
+
+</body>
+</html>
+
